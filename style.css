@@ -25,6 +25,26 @@
   .logo-img {
     height: 40px;
   }
+
+  .back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #005eff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .back-button:hover {
+    background-color: #0041c4;
+    transform: scale(1.05);
+  }
+  
   
   .menu-icon {
     font-size: 24px;
@@ -36,10 +56,28 @@
     flex-grow: 1;
   }
   
-  .main-content h1, .form-content h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+  .main-content h2 {
+    font-size: 24px;
+    font-weight: bold;
   }
+  
+  .main-content h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+
+  .main-content,
+.form-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px); 
+  text-align: center;
+  padding: 20px;
+}
+
   
   .tagline, .description {
     font-size: 18px;
@@ -75,6 +113,10 @@
     width: 300px;
     border: 1px solid black;
     border-radius: 6px;
+  }
+
+  footer {
+    margin-top: auto;
   }
  
   .footer {
