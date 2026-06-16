@@ -1,15 +1,10 @@
-import { useState } from "react";
+import useState from 'react';
 
-function Counter(){
-  const [count, setCount] = useState(0);
+export default function App() {
 
+  //what the user is typing right now
+  const [word,setWord] = useState('')
 
-return (
-  <button onClick={() => setCount(count + 1)}>
-    Clicked {count} times
-  </button>
-);
-
+  //data we get back from the api
+  const [result,setResult] = useState(null)
 }
-
-export default Counter;
