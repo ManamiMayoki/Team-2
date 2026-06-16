@@ -3,4 +3,4 @@
   --color-brand-blue: #1e40af;
   --font-display: 'Oswald',sans-serif;
 }
-@plugin "@tailwindcss/typography"
+@plugin "@tailwindcss/typography";
