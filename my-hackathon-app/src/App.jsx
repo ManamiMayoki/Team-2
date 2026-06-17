@@ -1,7 +1,7 @@
-import useState from "react";
+import {useState} from "react";
 
 function App() {
-  // useState stores data that can changes
+  // useState stores data that can change
   const [formData, setFormData] = useState({
     name: "",
     Department: "",
@@ -21,13 +21,19 @@ function App() {
   }
 
   // Handle submit action safely
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault(); //stops page from refreshing
     setLoading(true);
     setError(null);
 
     try {
-      const response = await fetch("")
+      const response = await fetch("http://127.0.0.1:8000/api/data",{
+        method: "POST",
+        headers: {
+          "content-type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      })
 
       if (!response.ok) {
         throw new Error("Failed to submit form.");
