@@ -71,6 +71,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'fm.wsgi.application'
 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",  # Or whatever port your Vite/React app is using
+    "http://127.0.0.1:5173",
+]
+
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
