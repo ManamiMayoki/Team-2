@@ -69,6 +69,27 @@ return (
       </h1>
 
       {/*Search row - input + button */}
+      <div className="flex gap-3 mb-6" >
+        <input
+          type="text"
+          value={word}
+          onChange={(e) => setWord(e.target.value)}
+          onKeyDown={(e) => e.key === 'Enter' && searchWord()}
+          placeholder="Type a word and press Enter"
+          className="flex-1 border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+
+        <button
+          onClick={searchWord}
+          disabled={loading}
+          className="bg-blue-600 text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 disabled:opacity-50"
+        >
+          {loading ? 'Searching...' : 'Search'}
+
+             onClick={searchWord}
+        </button>
+      </div>
+
     </div>
   </div>
 )
