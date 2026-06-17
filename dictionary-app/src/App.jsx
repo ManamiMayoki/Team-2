@@ -51,5 +51,8 @@ const searchWord = async () => {
   }catch(err){
     //if something goes wrong, show an error message
     setError(err.message)
+  }finally{
+    //always turn off loading state when the request is done
+    setLoading(false);
   }
 }
