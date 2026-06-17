@@ -7,4 +7,10 @@ export default function App() {
 
   //data we get back from the api
   const [result,setResult] = useState(null)
+
+  //true if we are waiting for the api to respond
+  const [loading,setLoading] = useState(false)
+
+  //a message to show if something goes wrong
+  const [error,setError] = useState('')
 }
