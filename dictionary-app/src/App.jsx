@@ -64,7 +64,11 @@ return (
 
     {/* Card container */}
     <div className="max-w-xl mx-auto bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
-      <h1 className="text-2xl font-semibold text-gray-800 mb-6">Dictionary</h1>
+      <h1 className="text-2xl font-semibold text-gray-800 mb-6">
+        Dictionary
+      </h1>
+
+      {/*Search row - input + button */}
     </div>
   </div>
 )
