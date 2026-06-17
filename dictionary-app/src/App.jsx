@@ -30,4 +30,26 @@ const searchWord = async () => {
   setResult(null);
   setError('');
   setLoading(true);
+
+  try {
+    //build the api url with the word the user typed
+    const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+
+    //send request and wait for response
+    const response = await fetch(url);
+
+    //if word not found, the api returns 404 status
+    if (!response.ok) {
+      throw new Error('Word not found. Try another word.');
+    }
+
+    //convert the response to javascript object(json)
+    const data = await response.json();
+
+    //store the result in state
+    setResult(data[0]);
+  }catch(err){
+    //if something goes wrong, show an error message
+    setError(err.message)
+  }
 }
