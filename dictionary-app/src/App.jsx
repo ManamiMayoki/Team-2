@@ -1,3 +1,5 @@
+//------------step-01: import and state setup----------------
+
 import useState from 'react';
 
 export default function App() {
@@ -13,4 +15,19 @@ export default function App() {
 
   //a message to show if something goes wrong
   const [error,setError] = useState('')
+}
+
+
+//------------step-02: search function----------------
+
+//this function run when the user clicks the search button
+const searchWord = async () => {
+
+  //if the user hasn't typed anything, do nothing
+  if (!word.trim()) return;
+
+  //clear previous results and show loading state
+  setResult(null);
+  setError('');
+  setLoading(true);
 }
